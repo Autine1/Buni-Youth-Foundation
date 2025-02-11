@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+         content="width=device-width, initial-scale=1.0">
+        <meta name="theme-style-mode" content="1"><!-0==light, 1==dark->
+        <title>Log in</title>
+        <link rel="stylesheet" href="LOGIN.html"> 
+        <link rel="stylesheet" href="LOGIN.css">
+    </head>
+    <body>
+        <div class="container">
+            <img src="loading.gif" alt="background image" class="background-image">
+            <div class="login-details">
+                <h2>LOGIN DETAILS</h2>
+                <form id="loginForm">
+                    <label for="username">User Name:</label>
+                    <input type="text" id="username" name="username"
+                    placeholder="User Name" required>
+                    <label for="email">Email:</label>
+                    <input type="text" id="Email" name="email"
+                    placeholder="Auslearnasy@gmail.com" required><br>
+                    <label for="Password">Password:</label>
+                    <input type="password" id="Password" name="Password"
+                    placeholder="********" required><br>
+                    <button type="button" onclick="showDetails()">login</button>
+                </form>
+             <p id="displayDetails"></p>
+            </div>
+        </div>
+        <footer class="bg-light p-3">
+            <ul></ul>
+            <li>Enter login details to login</li><br>
+            <li>Feel free to support and peform together::</li>
+        </footer>
+        <script>
+            function showDetails(){
+                const username=document.getElementById('username').value;
+                const  Password=document.getElementById('Password').value;
+                const  Email=document.getElementById('Email').value;
+                document.getElementById('displayDetails').innerHTML;
+                    '<strong>Username:</strong> ${username}
+                    <br><strong>Password:</strong> ${password}';
+            }
+        </script>
+    </body>
+    </html>

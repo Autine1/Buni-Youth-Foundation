@@ -1,0 +1,193 @@
+<! doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
+        <meta name="theme-style-mode" content="1"><!-0==light, 1==dark->
+        <link ret="stylesheet" href="REGISTER.css"/>
+        <title> Register</title>
+        <style>
+            body{
+                background-color: #00ffff5b;
+                font-family: Arial, sans-serif;
+                font-size: medium;
+                color: #a52a99;
+                padding: 0px;;
+                width:100%;
+                height: 2200px;
+                float:center;
+            
+            }
+            form label{
+                float: left;
+                width: 100%;
+            }
+           form input,form select,form textarea{
+                width: 40%;
+                margin-bottom: 10px;
+                border: 2px solid #cccccc;
+                font-size: 16px;
+            }
+            input[type="submit"]{
+                background-color: #71da20;
+                width: 20%;
+                font-size: 16px;
+                z-index: 60px;
+                padding: 10px;
+                cursor: pointer;
+            }
+            input[type="submit"]:hover{
+                background-color: #0037ff92;
+        
+            }
+            footer{
+    background-color:#c02fc08a;
+    color:#000000;
+    text-align: center;
+    padding: 0px;
+    width:100%;
+    bottom:0;
+    font-size:small;
+    position:fixed;
+    border-bottom: #bf3e27;
+    float: left;
+}
+header{
+    text-align: center;
+    color:#8a2be2;
+    background-color: #ffdead;
+    width:100%;
+    font-size: xx-large;
+    position:sticky; 
+}
+     section{
+        height:60px;
+        background-color:#bf3e27;
+        color: #000000 ;
+        text-align: left;
+        width: 30%;
+     }
+       .to-top{
+        top:20px;
+        right: center;
+        padding:10px;
+        cursor:pointer;
+       }
+       .to-top:hover{
+        background-color: #0c7b83;
+       }
+       .moving-object{
+        width:100px;
+        animation:moveForword 5s linear infinite;
+       }
+       @keyframes moveForward{
+        0%{
+            transform:translate(-100px)
+            scale(1)
+        }
+        50%{
+            transform:translate(50vw)
+            scale(1.5);
+        }
+        100%{
+            transform:translate(100vw)
+            scale(2);
+        }
+       }
+       button{
+        border-radius: 5px;
+       }
+        </style>
+    </head>
+    <body>
+        <div class="container mt-5">
+            <header class="text-center mb-4">
+        <b> Enter our details to register</b></header>
+        <image src="about-3.png" alt="Moving Image" onmouseover="this.src='phone-02.png';"
+     onmouseout="this.src='about-3.png';" length="60%" width="100%" class="
+     moving-image"/>
+         
+     <div class="card">
+        <div class="card-body">
+            <h3 class="text-center mb-3"><em>Register form</em></h3>
+
+        <form id="RegisterForm" action="receive" method="POST">
+            <div class form-group>
+            <label for="fist_name">First Name</label>
+           <input type="text" name="first_name"
+           placeholder="first name"/></div>
+           <br>
+           <div class form-group>
+           <label for="last_name">Last Name</label>
+           <input type="text" name="last"
+           placeholder="last name"/></div>
+           <br>
+           <div class form-group>
+           <label for="dob.name">Date Of Birth</label> 
+           <input type="date" name="dob"
+           placeholder="dd/mm/yy"/></div>
+        <br/>
+        <div class form-group>
+           <label for="gender">Gender</label><br>
+           <input type="radio" name="male"value="male"/>Male
+           <br>
+           <input type="radio" gender="female"value="female"/>Female</div>
+           <br/>
+           <div class form-group>
+           <label
+           <label for="county">County</label>
+           <select name="county">
+            <option>Nairobi</option> 
+            <option>Mombasa</option> 
+            <option>Kisumu</option> 
+            <option>Bungoma</option>
+            <option>Kakamega</option>
+            <option>Transnzoia</option>
+            <option>Busia</option>
+            <option>Vihiga</option>
+            <option>Uazingishu</option>
+           </select></div>
+           <br>
+           <div class form-group>
+           <label for="phone">Phone number</label>
+           <input type="tel" id="phone" name="phone"
+           placeholder="your phone number"><br>
+           <label for="email">Email</label>
+           <input type="email" name="email"
+           placeholder="email@example.com"/></div>
+           <br>
+           <div class form-group>
+           <label for="password">Password</label>
+           <input type="password" name="password"
+           placeholder="password"/></div>
+           <br>
+           <div class form-group>
+           <label for="message">Your message</label>
+           <textarea id="message" rows="4"
+           placeholder="Type your message"></textarea></div><br>
+           <div class form-group>
+           <label for="address">address</label>
+           <textarea id="Address" rows="2"
+           placeholder="Type your address"></textarea></div><br>
+           <div class form-group>
+           <label for="terms">Agree terms</label>
+           <input type="checkbox" name="male" value="terms"/><br>
+           <input type="Submit" value="submit"></div>
+        </form>
+    </div>
+    </div>
+    <footer class="bg-light p-3">
+        <p><li><i>Ensure your details are correct before submission</i></li><br>
+        <li><I>For any mis-understanding when filling the form, please contact us through the email::</I></li></p>
+    </footer>
+</div>
+
+         
+        <section>
+        <h3><b><i> Scroll:: </i></b></h>
+            <div class="to-top"
+            onclick="window.scrollTo({top:0,behavior:'smooth'})"> To Top</div>
+        </section>
+    </body>
+</html>
